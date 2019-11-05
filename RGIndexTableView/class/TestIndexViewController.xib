@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestIndexViewController">
+            <connections>
+                <outlet property="cityContainer" destination="gmB-k4-mYx" id="1sl-EZ-JRx"/>
+                <outlet property="cityTableView" destination="o6f-Xd-ZZR" id="a0c-eh-5kq"/>
+                <outlet property="indexContainer" destination="R14-Qw-9rO" id="GKO-fa-bJn"/>
+                <outlet property="indexTableView" destination="U1k-jC-EeB" id="7T1-bV-WMl"/>
+                <outlet property="searchCityField" destination="cca-cr-6I9" id="y1t-z8-Aqm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmB-k4-mYx" userLabel="cityContainer">
+                    <rect key="frame" x="0.0" y="150" width="414" height="746"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o6f-Xd-ZZR">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="746"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R14-Qw-9rO" userLabel="indexContainer">
+                            <rect key="frame" x="354" y="173" width="50" height="400"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U1k-jC-EeB">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="400"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.16568011886503067" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="U1k-jC-EeB" firstAttribute="top" secondItem="R14-Qw-9rO" secondAttribute="top" id="3Wd-1U-qoA"/>
+                                <constraint firstItem="U1k-jC-EeB" firstAttribute="leading" secondItem="R14-Qw-9rO" secondAttribute="leading" id="6q1-h7-drI"/>
+                                <constraint firstAttribute="bottom" secondItem="U1k-jC-EeB" secondAttribute="bottom" id="N3x-iE-bvS"/>
+                                <constraint firstAttribute="width" constant="50" id="QRy-9Z-Sz7"/>
+                                <constraint firstAttribute="trailing" secondItem="U1k-jC-EeB" secondAttribute="trailing" id="a5p-R3-1Af"/>
+                                <constraint firstAttribute="height" constant="400" id="d4d-iV-1et"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="o6f-Xd-ZZR" firstAttribute="top" secondItem="gmB-k4-mYx" secondAttribute="top" id="71b-T9-c0h"/>
+                        <constraint firstAttribute="trailing" secondItem="o6f-Xd-ZZR" secondAttribute="trailing" id="90d-zW-Mnb"/>
+                        <constraint firstItem="R14-Qw-9rO" firstAttribute="centerY" secondItem="gmB-k4-mYx" secondAttribute="centerY" id="dY5-5G-p6h"/>
+                        <constraint firstItem="o6f-Xd-ZZR" firstAttribute="leading" secondItem="gmB-k4-mYx" secondAttribute="leading" id="lK4-uO-v3Z"/>
+                        <constraint firstAttribute="trailing" secondItem="R14-Qw-9rO" secondAttribute="trailing" constant="10" id="tSo-9J-xKQ"/>
+                        <constraint firstAttribute="bottom" secondItem="o6f-Xd-ZZR" secondAttribute="bottom" id="yK6-kp-J6r"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="搜索城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cca-cr-6I9">
+                    <rect key="frame" x="0.0" y="100" width="414" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fdl-Lj-hqp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gmB-k4-mYx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1L8-cz-vpP"/>
+                <constraint firstAttribute="bottom" secondItem="gmB-k4-mYx" secondAttribute="bottom" id="2dh-W6-9rT"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="cca-cr-6I9" secondAttribute="trailing" id="HQy-U5-fRj"/>
+                <constraint firstItem="gmB-k4-mYx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="Kfm-IR-iMV"/>
+                <constraint firstItem="cca-cr-6I9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Pgg-qh-12E"/>
+                <constraint firstItem="gmB-k4-mYx" firstAttribute="top" secondItem="cca-cr-6I9" secondAttribute="bottom" id="XCO-wM-wQ0"/>
+                <constraint firstAttribute="trailing" secondItem="gmB-k4-mYx" secondAttribute="trailing" id="klE-ax-nYS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-249" y="169"/>
+        </view>
+    </objects>
+</document>
