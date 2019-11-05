@@ -1,3 +1,3 @@
 # RGIndexTableView
 
-![asdf](sc.png)
+![asdf](https://github.com/TangChangTomYang/RGIndexTableView/blob/master/img/sc.png)
